@@ -12,7 +12,7 @@ RUN wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.zip && unzip
 ENV CLOUDSDK_PYTHON_SITEPACKAGES 1
 
 RUN google-cloud-sdk/install.sh --usage-reporting=true --path-update=true --bash-completion=true --rc-path=/.bashrc --disable-installation-options
-RUN yes | google-cloud-sdk/bin/gcloud components update --quiet pkg-go pkg-python pkg-java preview app
+RUN yes | google-cloud-sdk/bin/gcloud components update --quiet app-engine-php  app-engine-java  app-engine-python  app
 RUN mkdir /.ssh
 RUN mkdir -p /var/log/dataproxy
 
